@@ -1,4 +1,4 @@
-import 'package:bloc_template/src/imports/core_imports.dart';
+import 'package:upskill_consultancy/src/imports/core_imports.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -11,10 +11,10 @@ class App extends StatelessWidget {
 
   Widget _buildMaterialApp(BuildContext context) {
     return MaterialApp.router(
-      title: 'bloc_template',
+      title: 'Upskill Consultancy',
       debugShowCheckedModeBanner: false,
-      theme: buildLightTheme(primaryColorHex: '#2e00ad'),
-      darkTheme: buildDarkTheme(primaryColorHex: '#2e00ad'),
+      theme: buildLightTheme(primaryColorHex: '#019BFE'),
+      darkTheme: buildDarkTheme(primaryColorHex: '#019BFE'),
       themeMode: ThemeMode.system,
       routerConfig: appRouter,
       localizationsDelegates: context.localizationDelegates,

@@ -346,19 +346,23 @@ ThemeData _buildTheme(ColorScheme colorScheme, AppColorsExtension customColors) 
 }
 
 ThemeData buildLightTheme({required String primaryColorHex}) {
-  final seed = _colorFromHex(primaryColorHex.isNotEmpty ? primaryColorHex : '#6750A4');
+  final seed = _colorFromHex(primaryColorHex.isNotEmpty ? primaryColorHex : '#019BFE');
   final colorScheme = ColorScheme.fromSeed(
     seedColor: seed,
+    primary: seed,
     brightness: Brightness.light,
+    surface: UCColors.backgroundLight,
   );
   return _buildTheme(colorScheme, AppPalettes.light);
 }
 
 ThemeData buildDarkTheme({required String primaryColorHex}) {
-  final seed = _colorFromHex(primaryColorHex.isNotEmpty ? primaryColorHex : '#6750A4');
+  final seed = _colorFromHex(primaryColorHex.isNotEmpty ? primaryColorHex : '#019BFE');
   final colorScheme = ColorScheme.fromSeed(
     seedColor: seed,
+    primary: seed,
     brightness: Brightness.dark,
+    surface: UCColors.backgroundDark,
   );
   return _buildTheme(colorScheme, AppPalettes.dark);
 }

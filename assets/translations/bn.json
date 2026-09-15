@@ -1,0 +1,52 @@
+{
+  "shared": {
+    "get_started": "শুরু করুন",
+    "next": "পরবর্তী",
+    "skip": "এড়িয়ে যান"
+  },
+  "onboarding": {
+    "stat_1": "১০০+",
+    "title_1": "কাস্টম সফটওয়্যার সল্যুশন",
+    "subtitle_1": "গ্লোবাল মার্কেটের জন্য",
+    "stat_2": "২৫০০+",
+    "title_2": "আইটি প্রফেশনাল নিয়োগ",
+    "subtitle_2": "যুক্তরাষ্ট্রে সফল কর্মসংস্থান",
+    "stat_3": "১০,০০০+",
+    "title_3": "প্রশিক্ষিত পেশাজীবী",
+    "subtitle_3": "আইটি ও আধুনিক প্রযুক্তিতে"
+  },
+  "home": {
+    "home_title": "হোম",
+    "welcome_home": "আপস্কিল কনসালটেন্সিতে স্বাগতম!",
+    "home_subtitle": "পেশাগত উৎকর্ষের পথে আপনার যাত্রা শুরু করুন।"
+  },
+  "auth": {
+    "log_in": "লগ ইন",
+    "log_in_subtitle": "আপনার ইমেইল ও পাসওয়ার্ড দিন",
+    "email": "ইমেইল",
+    "email_required": "ইমেইল আবশ্যক",
+    "email_invalid": "সঠিক ইমেইল দিন",
+    "password": "পাসওয়ার্ড",
+    "password_required": "পাসওয়ার্ড আবশ্যক",
+    "password_too_short": "পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে",
+    "remember_me": "মনে রাখুন",
+    "forgot_password": "পাসওয়ার্ড ভুলে গেছেন?",
+    "login_button": "লগইন",
+    "dont_have_account": "অ্যাকাউন্ট নেই? ",
+    "sign_up": "নিবন্ধন করুন",
+    "create_account": "অ্যাকাউন্ট তৈরি করুন",
+    "create_account_subtitle": "শুরু করতে নতুন একটি অ্যাকাউন্ট তৈরি করুন।",
+    "name": "নাম",
+    "name_required": "নাম আবশ্যক",
+    "confirm_password": "পাসওয়ার্ড নিশ্চিত করুন",
+    "confirm_password_required": "পাসওয়ার্ড নিশ্চিত করা আবশ্যক",
+    "passwords_do_not_match": "পাসওয়ার্ড দুটি মিলছে না",
+    "create_account_button": "অ্যাকাউন্ট তৈরি করুন",
+    "already_have_account": "ইতিমধ্যে অ্যাকাউন্ট আছে? ",
+    "sign_in": "সাইন ইন",
+    "or_continue_with": "অন্যান্য মাধ্যমে সাইন ইন",
+    "forgot_password_title": "পাসওয়ার্ড পুনরুদ্ধার",
+    "forgot_password_subtitle": "অ্যাকাউন্ট পুনরুদ্ধার লিংক পেতে আপনার ইমেইল দিন।",
+    "reset_link_sent": "আপনার ইমেইলে পাসওয়ার্ড রিসেট লিংক পাঠানো হয়েছে।"
+  }
+}
