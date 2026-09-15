@@ -87,40 +87,70 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
   }
 }
 
+/// UC Brand Colors as defined in development plan:
+/// Original UC Blue, Charcoal and White.
+class UCColors {
+  UCColors._();
+
+  // Primary Brand Colors
+  static const Color primary = Color(0xFF019BFE); // Original UC Blue
+  static const Color primaryDark = Color(0xFF0072BD);
+  static const Color primaryLight = Color(0xFFE5F5FF);
+
+  // Charcoal Palette
+  static const Color charcoal = Color(0xFF3C4A54); // Original UC Charcoal
+  static const Color charcoalDark = Color(0xFF1E252B); // Deep Charcoal
+  static const Color charcoalLight = Color(0xFF5A6874);
+
+  // Neutral Palette
+  static const Color white = Colors.white;
+  static const Color backgroundLight = Color(0xFFF8FAFC);
+  static const Color surfaceLight = Color(0xFFFFFFFF);
+
+  static const Color backgroundDark = Color(0xFF12161A);
+  static const Color surfaceDark = Color(0xFF1E252B);
+
+  // Semantic
+  static const Color success = Color(0xFF10B981);
+  static const Color warning = Color(0xFFF59E0B);
+  static const Color error = Color(0xFFEF4444);
+  static const Color info = Color(0xFF019BFE);
+}
+
 /// Helper class to define the actual color palettes
 class AppPalettes {
   AppPalettes._();
 
   static const light = AppColorsExtension(
-    success: Color(0xFF2E7D32),
+    success: UCColors.success,
     onSuccess: Colors.white,
-    successContainer: Color(0xFFA5D6A7),
-    onSuccessContainer: Color(0xFF1B5E20),
-    warning: Color(0xFFED6C02),
+    successContainer: Color(0xFFD1FAE5),
+    onSuccessContainer: Color(0xFF065F46),
+    warning: UCColors.warning,
     onWarning: Colors.white,
-    warningContainer: Color(0xFFFFCC80),
-    onWarningContainer: Color(0xFFE65100),
-    info: Color(0xFF0288D1),
+    warningContainer: Color(0xFFFEF3C7),
+    onWarningContainer: Color(0xFF92400E),
+    info: UCColors.info,
     onInfo: Colors.white,
-    infoContainer: Color(0xFF81D4FA),
-    onInfoContainer: Color(0xFF01579B),
+    infoContainer: UCColors.primaryLight,
+    onInfoContainer: UCColors.primaryDark,
   );
 
   static const dark = AppColorsExtension(
-    success: Color(0xFF81C784),
-    onSuccess: Color(0xFF003300),
-    successContainer: Color(0xFF1B5E20),
-    onSuccessContainer: Color(0xFFA5D6A7),
-    warning: Color(0xFFFFB74D),
-    onWarning: Color(0xFF5D4037),
-    warningContainer: Color(0xFFE65100),
-    onWarningContainer: Color(0xFFFFCC80),
-    info: Color(0xFF4FC3F7),
-    onInfo: Color(0xFF01579B),
-    infoContainer: Color(0xFF0277BD),
-    onInfoContainer: Color(0xFFE1F5FE),
+    success: Color(0xFF34D399),
+    onSuccess: Color(0xFF064E3B),
+    successContainer: Color(0xFF065F46),
+    onSuccessContainer: Color(0xFFA7F3D0),
+    warning: Color(0xFFFBBF24),
+    onWarning: Color(0xFF78350F),
+    warningContainer: Color(0xFF92400E),
+    onWarningContainer: Color(0xFFFDE68A),
+    info: Color(0xFF38BDF8),
+    onInfo: Color(0xFF0C4A6E),
+    infoContainer: Color(0xFF0369A1),
+    onInfoContainer: Color(0xFFBAE6FD),
   );
 }
 
 /// Access semantic colors via `context.appColors` from `context_extension.dart`.
-/// Example: `context.appColors.success`
+/// Example: `context.appColors.success`
