@@ -1,19 +1,24 @@
 {
   "shared": {
-    "get_started": "Get Started"
+    "get_started": "Get Started",
+    "next": "Next",
+    "skip": "Skip"
   },
   "onboarding": {
-    "onboarding_title_1": "Your Journey,\nPerfectly Planned",
-    "onboarding_subtitle_1": "Effortlessly create and organize your\ndream trips. Start exploring now!",
-    "onboarding_title_2": "Discover\nFriends Nearby",
-    "onboarding_subtitle_2": "See where your friends are traveling and\nexplore the world together.",
-    "onboarding_title_3": "Stay Updated\nwith Top Places",
-    "onboarding_subtitle_3": "Find trending destinations and must-see attractions,\nall tailored to enhance your travel plans."
+    "stat_1": "100+",
+    "title_1": "Custom Software Solution",
+    "subtitle_1": "in Global Market",
+    "stat_2": "2500+",
+    "title_2": "IT Professionals placed",
+    "subtitle_2": "in the USA",
+    "stat_3": "10,000+",
+    "title_3": "Professionals Trained in",
+    "subtitle_3": "IT Technologies"
   },
   "home": {
     "home_title": "Home",
-    "welcome_home": "Welcome Home!",
-    "home_subtitle": "You have successfully completed the onboarding process."
+    "welcome_home": "Welcome to UpSkill Consultancy!",
+    "home_subtitle": "Start your journey towards professional excellence."
   },
   "auth": {
     "log_in": "Log in",
