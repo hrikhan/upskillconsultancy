@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
 
-import 'package:bloc_template/src/app.dart';
+import 'package:upskill_consultancy/src/app.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -13,7 +13,7 @@ void main() {
 
     await tester.pumpWidget(
       EasyLocalization(
-        supportedLocales: const [Locale('en'),Locale('es'),],
+        supportedLocales: const [Locale('en'), Locale('bn'), Locale('es')],
         path: 'assets/translations',
         fallbackLocale: const Locale('en'),
         child: const App(),
