@@ -93,9 +93,9 @@ class UCColors {
   UCColors._();
 
   // Primary Brand Colors
-  static const Color primary = Color(0xFF019BFE); // Original UC Blue
-  static const Color primaryDark = Color(0xFF0072BD);
-  static const Color primaryLight = Color(0xFFE5F5FF);
+  static const Color primary = Color(0xFF2BA2DD); // UpSkill Primary Blue
+  static const Color primaryDark = Color(0xFF1E88C7);
+  static const Color primaryLight = Color(0xFFE8F6FD);
 
   // Charcoal Palette
   static const Color charcoal = Color(0xFF3C4A54); // Original UC Charcoal
@@ -114,7 +114,7 @@ class UCColors {
   static const Color success = Color(0xFF10B981);
   static const Color warning = Color(0xFFF59E0B);
   static const Color error = Color(0xFFEF4444);
-  static const Color info = Color(0xFF019BFE);
+  static const Color info = Color(0xFF2BA2DD);
 }
 
 /// Helper class to define the actual color palettes

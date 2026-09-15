@@ -63,9 +63,21 @@ class AppTopBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       iconTheme: theme.appBarTheme.iconTheme,
       actions: actions ?? [],
+      bottom: isTransparent
+          ? null
+          : PreferredSize(
+              preferredSize: const Size.fromHeight(1.2),
+              child: Container(
+                color: theme.brightness == Brightness.dark
+                    ? const Color(0xFF2D3748)
+                    : const Color(0xFFE2E8F0),
+                height: 1.2,
+              ),
+            ),
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize =>
+      Size.fromHeight(kToolbarHeight + (isTransparent ? 0 : 1.2));
 }

@@ -18,7 +18,19 @@
   "home": {
     "home_title": "Home",
     "welcome_home": "Welcome to UpSkill Consultancy!",
-    "home_subtitle": "Start your journey towards professional excellence."
+    "home_subtitle": "Start your journey towards professional excellence.",
+    "announcements": "Announcements",
+    "view_all": "View All",
+    "top_courses": "Top Courses",
+    "featured_courses": "Featured Courses",
+    "continue_learning": "Continue Learning",
+    "resume_lesson": "Resume Lesson",
+    "practice_tools": "Practice Tools",
+    "practice_tools_sub": "Interactive coding sandboxes & learning labs",
+    "course_categories": "Course Categories",
+    "course_categories_sub": "Explore career-focused IT specializations",
+    "announcement_modal_title": "Announcements & Updates",
+    "close": "Close"
   },
   "auth": {
     "log_in": "Log in",
@@ -48,5 +60,46 @@
     "forgot_password_title": "Forgot Password",
     "forgot_password_subtitle": "Enter your email address to receive a reset link\nand regain access to your account.",
     "reset_link_sent": "Password reset link sent to your email."
+  },
+  "nav": {
+    "home": "Home",
+    "courses": "Courses",
+    "my_learning": "My Learning",
+    "services": "Services",
+    "dashboard": "Dashboard"
+  },
+  "courses": {
+    "title": "Courses",
+    "subtitle": "Explore our industry-standard IT courses and master in-demand tech skills.",
+    "search_hint": "Search courses, topics...",
+    "popular": "Popular Courses",
+    "categories": "Categories",
+    "all": "All",
+    "explore": "Explore Courses"
+  },
+  "my_learning": {
+    "title": "My Learning",
+    "subtitle": "Track your ongoing courses, progress, and learning path.",
+    "in_progress": "In Progress",
+    "completed": "Completed",
+    "certificates": "Certificates",
+    "continue_learning": "Continue Learning",
+    "resume": "Resume Lesson",
+    "joined_courses": "Courses You Joined"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Discover enterprise consultancy, IT training, and recruitment solutions.",
+    "consultation": "Book Free Consultation",
+    "our_services": "Our Services"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Manage your profile, learning achievements, and account settings.",
+    "my_profile": "My Profile",
+    "settings": "Settings",
+    "dark_mode": "Dark Mode",
+    "language": "Language",
+    "logout": "Log out"
   }
 }

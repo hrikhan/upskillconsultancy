@@ -13,8 +13,8 @@ class App extends StatelessWidget {
     return MaterialApp.router(
       title: 'Upskill Consultancy',
       debugShowCheckedModeBanner: false,
-      theme: buildLightTheme(primaryColorHex: '#019BFE'),
-      darkTheme: buildDarkTheme(primaryColorHex: '#019BFE'),
+      theme: buildLightTheme(primaryColorHex: '#2BA2DD'),
+      darkTheme: buildDarkTheme(primaryColorHex: '#2BA2DD'),
       themeMode: ThemeMode.system,
       routerConfig: appRouter,
       localizationsDelegates: context.localizationDelegates,

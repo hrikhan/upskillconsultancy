@@ -70,32 +70,32 @@ My Learning will be the center floating navigation button.
 - Add request confirmation and success states.
 - Prepare verification screens if required by authentication.
 
-### Step 11 — Home App Bar
+### Step 11 — Home App Bar - completed
 - Show the UC logo and UpSkill Consultancy name.
 - Add notification and profile icons.
 - Keep the app bar compact.
 
-### Step 12 — Home Announcements
+### Step 12 — Home Announcements - completed
 - Place announcements at the start of Home.
 - Use a compact card with minimal text.
 - Open the related screen when tapped.
 
-### Step 13 — Home Top Courses
+### Step 13 — Home Top Courses - completed
 - Show Top Courses below announcements.
 - Use horizontal course cards.
 - Add a View All action.
 
-### Step 14 — Home Featured Courses
+### Step 14 — Home Featured Courses - completed
 - Show Featured Courses below Top Courses.
 - Display image, title and essential course information.
 - Open course details on tap.
 
-### Step 15 — Home Continue Learning
+### Step 15 — Home Continue Learning - completed
 - Show Continue Learning for students with an active course.
 - Display progress and a Resume button.
 - Hide the section when there is no course to continue.
 
-### Step 16 — Home Practice Tools and Categories
+### Step 16 — Home Practice Tools and Categories - completed
 - Add shortcuts to available practice tools.
 - Show course categories below the tools.
 - Open the selected tool or filtered course list.

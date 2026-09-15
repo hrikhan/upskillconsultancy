@@ -346,7 +346,7 @@ ThemeData _buildTheme(ColorScheme colorScheme, AppColorsExtension customColors) 
 }
 
 ThemeData buildLightTheme({required String primaryColorHex}) {
-  final seed = _colorFromHex(primaryColorHex.isNotEmpty ? primaryColorHex : '#019BFE');
+  final seed = _colorFromHex(primaryColorHex.isNotEmpty ? primaryColorHex : '#2BA2DD');
   final colorScheme = ColorScheme.fromSeed(
     seedColor: seed,
     primary: seed,
@@ -357,7 +357,7 @@ ThemeData buildLightTheme({required String primaryColorHex}) {
 }
 
 ThemeData buildDarkTheme({required String primaryColorHex}) {
-  final seed = _colorFromHex(primaryColorHex.isNotEmpty ? primaryColorHex : '#019BFE');
+  final seed = _colorFromHex(primaryColorHex.isNotEmpty ? primaryColorHex : '#2BA2DD');
   final colorScheme = ColorScheme.fromSeed(
     seedColor: seed,
     primary: seed,

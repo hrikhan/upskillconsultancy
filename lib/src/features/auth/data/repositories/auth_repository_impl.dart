@@ -1,99 +1,76 @@
-import 'package:upskill_consultancy/src/imports/core_imports.dart';
-import 'package:upskill_consultancy/src/imports/packages_imports.dart';
-
+import 'dart:async';
+import 'package:fpdart/fpdart.dart';
+import 'package:upskill_consultancy/src/utils/typedefs.dart';
 import 'package:upskill_consultancy/src/features/auth/domain/entities/user.dart';
 import 'package:upskill_consultancy/src/features/auth/domain/repositories/auth_repository.dart';
 
+/// Pure mock implementation of [AuthRepository] during UI development.
+/// No network or API calls are made. Real Wix API integration will be added later.
 class AuthRepositoryImpl implements AuthRepository {
-  final AuthService _authService = AuthService.instance;
+  static const AppUser _defaultMockUser = AppUser(
+    id: 'mock_student_1',
+    name: 'Hridoy Khan',
+    email: 'hridoy@upskillconsultancy.com',
+  );
 
-  @override
-  Stream<AppUser?> get onAuthStateChanged {
-    return _authService.authStateChanges.map((userData) {
-      if (userData == null) return null;
-      return AppUser(
-        id: userData['id'] ?? '',
-        email: userData['email'] ?? '',
-        name: userData['name'],
-        photoUrl: userData['photoUrl'],
-      );
-    });
+  final StreamController<AppUser?> _authStateController =
+      StreamController<AppUser?>.broadcast();
+  AppUser? _currentUser = _defaultMockUser;
+
+  AuthRepositoryImpl() {
+    _authStateController.add(_currentUser);
   }
 
   @override
+  Stream<AppUser?> get onAuthStateChanged => _authStateController.stream;
+
+  @override
   FutureEither<AppUser> login({
-    required String email, 
+    required String email,
     required String password,
   }) async {
-    final result = await _authService.login(email: email, password: password);
-    
-    return result.flatMap((userData) {
-      if (userData == null) {
-        return left(const ServerFailure('Login failed: User record not found'));
-      }
-
-      final data = userData['user'] ?? userData;
-      final user = AppUser(
-        id: data['id'].toString(), 
-        email: data['email'] ?? email, 
-        name: data['name'],
-      );
-      
-      return right(user);
-    });
+    final user = AppUser(
+      id: 'mock_${DateTime.now().millisecondsSinceEpoch}',
+      name: email.contains('@') ? email.split('@').first : 'UpSkill Student',
+      email: email.isNotEmpty ? email : 'student@upskillconsultancy.com',
+    );
+    _currentUser = user;
+    _authStateController.add(_currentUser);
+    return right(user);
   }
 
   @override
   FutureEither<AppUser> signUp({
-    required String name, 
-    required String email, 
+    required String name,
+    required String email,
     required String password,
   }) async {
-    final result = await _authService.signUp(
-      name: name,
-      email: email,
-      password: password,
+    final user = AppUser(
+      id: 'mock_${DateTime.now().millisecondsSinceEpoch}',
+      name: name.isNotEmpty ? name : 'UpSkill Student',
+      email: email.isNotEmpty ? email : 'student@upskillconsultancy.com',
     );
-
-    return result.flatMap((userData) {
-      if (userData == null) {
-        return left(const ServerFailure('Sign up failed: User record corrupted'));
-      }
-
-      final data = userData['user'] ?? userData;
-      final user = AppUser(
-        id: data['id'].toString(), 
-        email: data['email'] ?? email, 
-        name: name,
-      );
-      
-      return right(user);
-    });
+    _currentUser = user;
+    _authStateController.add(_currentUser);
+    return right(user);
   }
 
   @override
-  FutureEither<void> forgotPassword({required String email}) {
-    return _authService.forgotPassword(email: email);
-  }
-
-  @override
-  FutureEither<void> logout() {
-    return _authService.logout();
+  FutureEither<void> forgotPassword({
+    required String email,
+  }) async {
+    return right(null);
   }
 
   @override
   FutureEither<AppUser?> checkAuthState() async {
-    final result = await _authService.getCurrentUser();
-    
-    return result.map((userData) {
-      if (userData == null) return null;
+    return right(_currentUser ?? _defaultMockUser);
+  }
 
-      return AppUser(
-        id: userData['id'], 
-        email: userData['email'] ?? '', 
-        name: userData['name'],
-        photoUrl: userData['photoUrl'],
-      );
-    });
+  @override
+  FutureEither<void> logout() async {
+    _currentUser = null;
+    _authStateController.add(null);
+    return right(null);
   }
 }

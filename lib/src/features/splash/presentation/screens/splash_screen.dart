@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:upskill_consultancy/src/routing/app_routes.dart';
 import 'package:upskill_consultancy/src/theme/color_schemes.dart';
 
@@ -40,25 +39,13 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   Future<void> _navigateNext() async {
-    // Splash duration exactly 4 seconds as requested
-    await Future<void>.delayed(const Duration(seconds: 4));
+    // Splash duration
+    await Future<void>.delayed(const Duration(seconds: 3));
 
     if (!mounted) return;
 
-    final prefs = await SharedPreferences.getInstance();
-    final hasSeenOnboarding = prefs.getBool('has_seen_onboarding') ?? false;
-    final isLoggedIn = prefs.getBool('is_logged_in') ?? false;
-
-    if (!mounted) return;
-
-    if (!hasSeenOnboarding) {
-      context.go(AppRoutes.onboarding);
-    } else if (isLoggedIn) {
-      context.go(AppRoutes.home);
-    } else {
-      // Guest mode or login - default to login for new sessions
-      context.go(AppRoutes.login);
-    }
+    // Navigate to onboarding screen
+    context.go(AppRoutes.onboarding);
   }
 
   @override
